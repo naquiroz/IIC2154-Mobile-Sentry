@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PizzaApp",
-    "slug": "PizzaApp",
+    "name": "ExampleApp",
+    "slug": "ExampleApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -21,6 +21,16 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps"
+        }
+      ]
     }
   }
 }
